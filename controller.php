@@ -26,12 +26,19 @@ class SwagggPackage extends Package {
 	/**
 	 * Installs block swaggg_upload
 	 * Installs block swaggg_view
+	 * Adds FileSet Swaggg
 	 */
 	public function install() {
 		$pkg = parent::install();
 
 		BlockType::installBlockTypeFromPackage('swaggg_upload', $pkg);
 		BlockType::installBlockTypeFromPackage('swaggg_view', $pkg);
+
+		Loader::model('file_set');
+		/**
+		 * We set the uid to 1 for super user
+		 */
+		FileSet::createAndGetSet('Swaggg', FileSet::TYPE_PUBLIC, 1);
 	}
 
 	/**

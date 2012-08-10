@@ -17,6 +17,8 @@ class SwagggHelper {
 	/**
 	 * Imports and prefixes file
 	 *
+	 * Adds file to Swaggg file set
+	 *
 	 * <code>
 	 * <?php
 	 * $file_version = SwagggHelper::importFile($_FILES['image']['tmp_name']);
@@ -35,6 +37,13 @@ class SwagggHelper {
 
 		$file_importer = new FileImporter();
 		$file_version = $file_importer->import($temp_file, $file_name);
+
+		$file_set = FileSet::getByName('Swaggg');
+		if(!$file_set) {
+			throw new SwagggException('Unable to get Swaggg File Set.');
+		}
+		$file_set->addFileToSet($file_version);
+
 
 		/**
 		 * If we get an error at this point lets throw an
