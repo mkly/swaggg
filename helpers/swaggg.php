@@ -33,7 +33,7 @@ class SwagggHelper {
 		Loader::library('file/importer');
 
 		$extension = self::getExtension($temp_file);
-		$file_name = 'swaggg_'.microtime().'.'.$extension;
+		$file_name = 'swaggg_'.uniqid().'.'.$extension;
 
 		$file_importer = new FileImporter();
 		$file_version = $file_importer->import($temp_file, $file_name);
