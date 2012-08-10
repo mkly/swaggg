@@ -30,7 +30,7 @@
 	<div class="swaggg-bar">
 
 		<?php if(!$swaggg->getComputed('swaggg_percentage') && !$swaggg->getComputed('swoggg_percentage')): ?>
-			<div class="swaggg-bar-begin swaggg-bar"><?php echo t('Begin Judgement') ?></div>
+			<div class="swaggg-bar-begin swaggg-bar"><?php echo t('First Judgement') ?></div>
 
 		<?php else: ?>
 			<div class="swaggg-bar-swaggg swaggg-bar" style="width: <?php echo $swaggg->getComputed('swaggg_percentage') ?>%"><span><?php echo t('Swaggg') ?></span></div>
