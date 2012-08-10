@@ -33,9 +33,9 @@
 			<div class="swaggg-bar-begin swaggg-bar"><?php echo t('First Judgement') ?></div>
 
 		<?php else: ?>
-			<div class="swaggg-bar-swaggg swaggg-bar" style="width: <?php echo $swaggg->getComputed('swaggg_percentage') ?>%"><span><?php echo t('Swaggg') ?></span></div>
+			<div class="swaggg-bar-swaggg swaggg-bar" style="width: <?php echo $swaggg->getComputed('swaggg_percentage') - 1?>%"><span><?php echo t('Swaggg') ?></span></div>
 
-			<div class="swaggg-bar-swoggg swaggg-bar" style="width: <?php echo $swaggg->getComputed('swoggg_percentage') ?>%"><span><?php echo t('Swoggg') ?></span></div>
+			<div class="swaggg-bar-swoggg swaggg-bar" style="width: <?php echo $swaggg->getComputed('swoggg_percentage') - 1?>%"><span><?php echo t('Swoggg') ?></span></div>
 		<?php endif ?>
 
 	</div><!-- .swaggg-bar -->

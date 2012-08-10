@@ -14,6 +14,12 @@
 	font-size: 16px;
 	line-height: 22px;
 }
+
+.swaggg-upload .error,
+.swaggg-upload .errors {
+	color: #D82525;
+}
+
 .swaggg-upload input[type=submit] {
 	font-family: MK2;
 	font-size: 19px;

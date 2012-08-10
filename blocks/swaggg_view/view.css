@@ -9,6 +9,11 @@
     font-style: normal;
 }
 
+.swaggg-view .error,
+.swaggg-view .errors {
+	color: #D82525;
+}
+
 .swaggg-view p {
 	color: #555;
 }
@@ -88,9 +93,7 @@
 	overflow: hidden;
 	margin-left: -1px;
 	background: #41CB3A;
-	border-top: 1px solid #555;
-	border-left: 1px solid #555;
-	border-bottom: 1px solid #555;
+	border: 1px solid #555;
 }
 .swaggg-view .swaggg-bar-swaggg span {
 	position: relative;
@@ -102,9 +105,7 @@
 	overflow: hidden;
 	margin-right: -1px;
 	background: #E62020;
-	border-top: 1px solid #555;
-	border-right: 1px solid #555;
-	border-bottom: 1px solid #555;
+	border: 1px solid #555;
 }
 .swaggg-view .swaggg-bar-swoggg span {
 	position: relative;
