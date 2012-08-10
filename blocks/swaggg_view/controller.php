@@ -84,9 +84,7 @@ class SwagggViewBlockController extends BlockController {
 
 			$swaggg->incrementSwaggg(true);
 
-			$this->set('swaggg', $swaggg);
-			$this->set('swaggg_incremented', true);
-			return true;
+			$this->redirect(Page::getCurrentPage()->getCollectionPath());
 		}
 		$this->set('error', t('Swaggg ID not found'));
 	}
@@ -120,9 +118,7 @@ class SwagggViewBlockController extends BlockController {
 
 			$swaggg->incrementSwoggg(true);
 
-			$this->set('swaggg', $swaggg);
-			$this->set('swoggg_incremented', true);
-			return true;
+			$this->redirect(Page::getCurrentPage()->getCollectionPath());
 		}
 		throw new SwagggException('No swaggg found by searched for id: '.$id.'.');
 	}
