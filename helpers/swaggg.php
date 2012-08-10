@@ -20,9 +20,7 @@ class SwagggHelper {
 	 * Adds file to Swaggg file set
 	 *
 	 * <code>
-	 * <?php
 	 * $file_version = SwagggHelper::importFile($_FILES['image']['tmp_name']);
-	 * ?>
 	 * </code>
 	 * @see SwagggUploadBlockController
 	 * @param string $temp_file Full path and file name

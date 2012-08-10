@@ -8,7 +8,7 @@ defined('C5_EXECUTE') or die('Access Denied.');
 /**
  * Produces a form that can be used to add Swaggg hopefuls
  *
- * @package Swagg
+ * @package Swaggg
  * @author Mike Lay <michael.lay.email@gmail.com>
  */
 class SwagggUploadBlockController extends BlockController {

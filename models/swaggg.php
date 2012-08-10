@@ -52,8 +52,8 @@ class Swaggg {
 	/**
 	 * Constructor is protected and called by factory methods
 	 *
+	 * @param array $data optional
 	 * @see assignFieldsFromArray()
-	 * @params array $data optional
 	 * @see findBySQL()
 	 * @see findOneBySQL()
 	 * @see findOneByID()
@@ -83,17 +83,16 @@ class Swaggg {
 	 * Must still call save() to commit to database
 	 *
 	 * <code>
-	 * <?php
 	 * Swaggg::create(
 	 * 	array(
 	 * 		'image_id' => 3,
 	 * 		'description' => $desc
 	 * 	)
 	 * );
-	 * ?>
+	 * </code>
 	 *
 	 * @static
-	 * @params array $data optional initial values
+	 * @param array $data optional initial values
 	 * @return Swaggg
 	 */
 	public static function create(array $data = array()) {
@@ -104,9 +103,7 @@ class Swaggg {
 	 * Factory method to find a single Swaggg by ID
 	 *
 	 * <code>
-	 * <?php
 	 * $swaggg = Swaggg::findOneByID($id);
-	 * ?>
 	 * </code>
 	 * @static
 	 * @param integer $id
@@ -120,9 +117,7 @@ class Swaggg {
 	 * Factory method to find a single Swaggg by SQL
 	 *
 	 * <code>
-	 * <?php
 	 * $swaggg = Swaggg::findOneBySQL('WHERE id = ?', array(1));
-	 * ?>
 	 * </code>
 	 * @static
 	 * @param string $where optional SQL WHERE statement
@@ -138,9 +133,8 @@ class Swaggg {
 	 * Factory method to find many Swaggs by SQL
 	 *
 	 * <code>
-	 * <?php
 	 * $swagggs = Swaggg::findManyBySQL('WHERE description LIKE %?%', array('pizza'));
-	 * ?>
+	 * </code>
 	 * @static
 	 * @param string $where optional SQL WHERE statement
 	 * @param array $params optional parametized array of values
@@ -155,9 +149,8 @@ class Swaggg {
 	 * Factory method to find one or more Swagggs by SQL
 	 *
 	 * <code>
-	 * <?php
 	 * Swaggg:findBySQL('WHERE id = ?', array(1));
-	 * ?>
+	 * </code>
 	 * @static
 	 * @param string $where SQL WHERE statement
 	 * @param array $params parametized array of values
@@ -206,9 +199,7 @@ class Swaggg {
 	 * If field is not in $fields property array
 	 * throws SwagggException
 	 * <code>
-	 * <?php
 	 * $description = $swaggg->get('description');
-	 * ?>
 	 * </code>
 	 * @param string $field Swaggg field to get
 	 * @return mixed
@@ -294,9 +285,7 @@ class Swaggg {
 	 * Gets $fields as array
 	 *
 	 * <code>
-	 * <?php
 	 * $fields = $swaggg->getFieldsAsArray();
-	 * ?>
 	 * </code>
 	 * @return array
 	 */
@@ -311,9 +300,7 @@ class Swaggg {
 	 * Gets $fields as json encoded string
 	 *
 	 * <code>
-	 * <?php
 	 * $json_encoded = $swaggg->getFieldsAsJson();
-	 * ?>
 	 * </code>
 	 * @return string json data
 	 */
@@ -367,7 +354,7 @@ class Swaggg {
 	 * Marks object as being changed since
 	 * retreiving from the database
 	 *
-	 * @retrun Swaggg
+	 * @return Swaggg
 	 */
 	protected function markAsChanged() {
 		$this->changed = true;
@@ -410,12 +397,11 @@ class Swaggg {
 	 * Increments total number of swaggg votes
 	 *
 	 * <code>
-	 * <?php
 	 * $swaggg->incrementSwaggg(true);
-	 * ?>
 	 * </code>
 	 * @see SwagggVote
-	 * @params bool $save_now specified if value should be saved to database immediately
+	 * @param bool $save_now specified if value should be saved to database immediately
+	 * @return mixed Swaggg or bool
 	 */
 	public function incrementSwaggg($save_now = false) {
 		$this->set('swaggg_votes', $this->get('swaggg_votes') + 1);
@@ -438,11 +424,9 @@ class Swaggg {
 	 * Increments total number of swaggg votes
 	 *
 	 * <code>
-	 * <?php
 	 * $swaggg->incrementSwoggg();
-	 * ?>
 	 * </code>
-	 * @params bool $save_now specified if value should be saved to database immediately
+	 * @param bool $save_now specified if value should be saved to database immediately
 	 */
 	public function incrementSwoggg($save_now = false) {
 		$this->set('swoggg_votes', $this->get('swoggg_votes') + 1);
@@ -471,13 +455,12 @@ class Swaggg {
 	 * If successful a fresh record will be pulled from
 	 * database
 	 * <code>
-	 * <?php
 	 * $swaggg = Swaggg::create(array('description' => 'Best Pizza'));
 	 * $swaggg->set('image_id', 44);
 	 * if($swaggg->save() === false) {
 	 * 	$errors = $this->getErrors();
 	 * }
-	 * ?>
+	 * </code>
 	 * returns bool indicating if save was successful
 	 */
 	public function save() {

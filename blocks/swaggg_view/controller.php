@@ -8,7 +8,7 @@ defined('C5_EXECUTE') or die('Access Denied.');
 /**
  * Produces a form that can be used to add Swaggg hopefuls
  *
- * @package Swagg
+ * @package Swaggg
  * @author Mike Lay <michael.lay.email@gmail.com>
  */
 class SwagggViewBlockController extends BlockController {
@@ -128,7 +128,7 @@ class SwagggViewBlockController extends BlockController {
 	}
 
 	/**
-	 * Gets a random Swagg for view
+	 * Gets a random Swaggg for view
 	 *
 	 * @see view()
 	 */
