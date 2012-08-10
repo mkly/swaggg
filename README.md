@@ -15,4 +15,4 @@ Add the _Swaggg_ _View_ block wherever you wish to have people view and judge th
 
 Configuration
 -------------
-Swaggg only lets someone judge a particular message 5 times. Any more than that an they get a deny message. If you would like to increase the judgement or to persuade others to value their judgements a little more carefully, you can set SWAGGG_MAX_VOTES to a different number in your /config/site.php file. The default is 5.
+Swaggg only lets someone judge a particular message 5 times. Any more than that an they get a deny message. If you would like to increase the judgement or to persuade others to value their judgements a bit more, you can set SWAGGG_MAX_VOTES to a different number in your /config/site.php file. The default is 5.
