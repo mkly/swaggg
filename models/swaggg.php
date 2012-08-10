@@ -176,7 +176,7 @@ class Swaggg {
 		/**
 		 * @see ADODB::GetAll()
 		 */
-		if($method === 'GetMany') {
+		if($method === 'GetAll') {
 			$responses = $db->GetAll($query, $params);
 			if($responses !== false) {
 				$swagggs = array();
