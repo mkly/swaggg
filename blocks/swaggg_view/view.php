@@ -7,22 +7,26 @@
 	</div>
 <?php endif ?>
 
-<img src="<?php echo $swaggg->getComputed('thumbnail', 400,300)->src ?>" />
-<p><?php echo $swaggg->get('description') ?></p>
+<?php if($no_swaggg): ?>
+	<h2><?php echo t('No Swagg Yet') ?></h2>
+<?php else: ?>
+	<img src="<?php echo $swaggg->getComputed('thumbnail', 400,300)->src ?>" />
+	<p><?php echo $swaggg->get('description') ?></p>
 
-<div class="swaggg-controls cf">
+	<div class="swaggg-controls cf">
 
-	<form method="post" action="<?php echo $this->action('swaggg') ?>" class="swaggg-increment">
-		<?php echo $form->hidden('swaggg_id', $swaggg->get('id')) ?>
-		<?php echo $form->submit('swaggg', t('Swaggg')) ?>
-	</form>
+		<form method="post" action="<?php echo $this->action('swaggg') ?>" class="swaggg-increment">
+			<?php echo $form->hidden('swaggg_id', $swaggg->get('id')) ?>
+			<?php echo $form->submit('swaggg', t('Swaggg')) ?>
+		</form>
+	
+		<form method="post" action="<?php echo $this->action('swoggg') ?>" class="swoggg-increment">
+			<?php echo $form->hidden('swaggg_id', $swaggg->get('id')) ?>
+			<?php echo $form->submit('swoggg', t('Swoggg')) ?>
+		</form>
 
-	<form method="post" action="<?php echo $this->action('swoggg') ?>" class="swoggg-increment">
-		<?php echo $form->hidden('swaggg_id', $swaggg->get('id')) ?>
-		<?php echo $form->submit('swoggg', t('Swoggg')) ?>
-	</form>
-
-</div><!-- .swaggg-controls -->
+	</div><!-- .swaggg-controls -->
+<?php endif ?>
 
 <div class="cf"></div>
 

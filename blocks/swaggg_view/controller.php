@@ -34,7 +34,6 @@ class SwagggViewBlockController extends BlockController {
 		$html = Loader::helper('html');
 		$this->addFooterItem(
 			$html->javascript(
-				'jquery.gradienttext.min.js',
 				'swaggg'
 			)
 		);
@@ -43,6 +42,10 @@ class SwagggViewBlockController extends BlockController {
 	public function view() {
 		$form = Loader::helper('form');
 		$swaggg = $this->getRandomSwaggg();
+		if(!$swaggg) {
+			$this->set('no_swaggg', true);
+			return true;
+		}
 		$next_swaggg_link =
 			Loader::helper('navigation')
 			->getLinkToCollection(
